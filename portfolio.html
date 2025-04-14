@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rowell D. Espina's Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="portfolio.css">
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <div class="logo">PORTFOLIO</div>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="#home" class="active"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="#about"><i class="fas fa-user"></i> About</a></li>
+                    <li><a href="#skills"><i class="fas fa-code"></i> Skills</a></li>
+                    <li><a href="#projects"><i class="fas fa-project-diagram"></i> Projects</a></li>
+                    <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main class="content">
+            <!-- Home Section -->
+            <section id="home" class="section active">
+                <div class="intro">
+                    <div class="profile-pic"><img src="pogi.jpeg" alt="Rowell D. Espina"></div>
+                    <div class="info">
+                        <h1>ESPINA, ROWELL D.</h1>
+                        <p class="role">BSIT Student</p>
+                        <ul>
+                            <li><i class="fas fa-map-marker-alt"></i> San Mateo Dolores Quezon</li>
+                            <li><i class="fas fa-graduation-cap"></i> Currently studying Information Technology</li>
+                            <li><i class="fas fa-heart"></i> Passionate in Software Development</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- About Section -->
+            <section id="about" class="section">
+                <div class="about-section">
+                    <h2>HI, I'M ROWELL!</h2>
+                    <div class="about-box">
+                        <p>
+                            I am a learner from the second-year level, and my course is Bachelor of Science in Information Technology.Seeking to expand knowledge of information technology and gain valuable experience that I can use in my work in the future.And wants to contribute to an organization while keeping up with IT skills. And I specialize in Canva for graphic design.CapCut for video editing and Figma for UI/UX design. My passion lies in creatingvisually appealing digital content that combines aesthetics with functionality.
+                        </p>
+                        <p style="margin-top: 20px;"> </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Skills Section -->
+            <section id="skills" class="section">
+                <h2 style="text-align: center; margin-top:30px; font-size: 42px; color: #e5dfc8;">MY SKILLS</h2>
+                <div class="skills-section">                   
+                    <div class="skill-box">
+                        <div class="skill-icon"><i class="fas fa-palette"></i></div>
+                        <h3 class="skill-title">Canva Editing</h3>
+                        <p class="skill-desc">Professional graphic design for social media, presentations, and marketing materials with advanced Canva techniques</p>
+                    </div>
+                    <div class="skill-box">
+                        <div class="skill-icon"><i class="fas fa-film"></i></div>
+                        <h3 class="skill-title">CapCut Editing</h3>
+                        <p class="skill-desc">Expert video editing with transitions, effects, color grading, and audio synchronization in CapCut</p>
+                    </div>
+                    <div class="skill-box">
+                        <div class="skill-icon"><i class="fab fa-figma"></i></div>
+                        <h3 class="skill-title">Figma Design</h3>
+                        <p class="skill-desc">UI/UX design, prototyping, and collaboration using Figma's powerful design tools</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Projects Section -->
+            <section id="projects" class="section">
+                <h2 style="text-align: center; font-size: 42px; color: #e5dfc8;">MY PROJECTS</h2>
+                <div class="projects-section">
+                    
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="coming.jpg" alt="Video Editing Projects">
+                        </div>
+                        <div class="project-info">                           
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="coming.jpg" alt="Figma Design Projects">
+                        </div>
+                        <div class="project-info">                                                                                   
+                        </div>                            
+                    </div>
+                </div>
+            </section>
+
+            <!-- Contact Section -->
+            <section id="contact" class="section">
+                <div class="contact-section">
+                    <h2>GET IN TOUCH</h2>
+                    <div class="contact-container">
+                        <form class="contact-form" id="contactForm">
+                            <div class="form-group">
+                                <label for="name">Name</label>
+                                <input type="text" id="name"placeholder="Name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" placeholder="Email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Message</label>
+                                <textarea id="message"placeholder="Message Here" required rows="5" required></textarea>
+                            </div>
+                            <button type="submit" class="submit-btn">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Dark Mode Toggle -->
+    <div class="dark-mode-toggle" id="darkModeToggle">
+        <i class="fas fa-moon"></i>
+    </div>
+
+    <script src="portfolio.js"></script>
+</body>
+</html>

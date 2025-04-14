@@ -1,0 +1,341 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: 'Georgia', serif;
+}
+
+body {
+    min-height: 100vh;
+    background-color: #4b4632;
+    color: white;
+}
+
+.container {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* Sidebar Styles */
+.sidebar {
+    width: 320px;
+    background-color: #5c5740;
+    padding: 20px;
+    position: fixed;
+    height: 100%;
+    transition: all 0.3s;
+}
+
+.logo {
+    font-weight: bold;
+    background-color: #a5a08a;
+    color: white;
+    padding: 30px;
+    margin-bottom: 30px;
+    font-size: 35px;
+    text-align: center;
+    clip-path: polygon(0 0, 90% 0, 100% 50%, 90% 100%, 0 100%);
+    transition: all 0.3s;
+}
+
+.logo:hover {
+    transform: scale(1.05);
+}
+
+nav ul {
+    list-style-type: none;
+    line-height: 60px;
+}
+
+nav ul li {
+    margin: 15px 0;
+    transition: transform 0.3s;
+}
+
+nav ul li:hover {
+    transform: translateX(10px);
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 30px;
+    position: relative;
+    padding-bottom: 5px;
+}
+
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: white;
+    transition: width 0.3s;
+}
+
+nav ul li a:hover::after,
+nav ul li a.active::after {
+ width: 100%;
+}
+
+/* Content Styles */
+.content {
+    flex-grow: 1;
+    padding: 60px;
+    margin-left: 320px;
+    transition: all 0.3s;
+}
+
+/* Home Page Styles */
+.intro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    text-align: center;
+    animation: fadeIn 1s ease-in;
+    padding-bottom: 8%;
+}
+
+.profile-pic img {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid #a5a08a;
+    transition: all 0.3s;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.profile-pic img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+}
+
+.info h1 {
+    font-size: 48px;
+    letter-spacing: 2px;
+    margin: 20px 0;
+    color: #e5dfc8;
+}
+
+.info .role {
+    font-size: 24px;
+    color: #a5a08a;
+    margin-bottom: 20px;
+}
+
+.info ul {
+    list-style: none;
+    font-size: 20px;
+    line-height: 1.6;
+}
+
+/* About Page Styles */
+.about-section {
+    max-width: 800px;
+    min-height: 100vh;
+    margin: 0 auto;
+    padding: 20vh 0;
+    animation: fadeIn 1s ease-in;
+}
+
+.about-section h2 {
+    font-size: 42px;
+    color: #e5dfc8;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.about-box {
+    background-color: #e5dfc8;
+    color: #1f1f1f;
+    padding: 40px;
+    border-radius: 15px;
+    font-size: 18px;
+    line-height: 1.8;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.about-box:hover {
+    transform: translateY(-10px);
+}
+
+/* Skills Page Styles */
+#skills {
+    padding-top: 150px;
+}
+.skills-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 30px;
+    padding: 5vh 5vh 0 5vh;
+    animation: fadeIn 1s ease-in;
+    min-height: 100vh;
+}
+
+.skill-box {
+    width: 250px;
+    height: 250px;
+    background-color: #8a8874;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    transition: all 0.3s;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.skill-box::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background-color: #a5a08a;
+}
+
+.skill-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+}
+
+.skill-icon {
+    font-size: 60px;
+    margin-bottom: 20px;
+    color: #e5dfc8;
+}
+
+.skill-title {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.skill-desc {
+    text-align: center;
+    font-size: 16px;
+    color: #e5dfc8;
+}
+
+/* Projects Page Styles */
+#projects {
+    padding-top: 130px;
+    min-height: 100vh;
+}
+.projects-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    padding: 40px;
+    animation: fadeIn 1s ease-in;
+}
+
+.project-card {
+    width: 350px;
+    background-color: #8a8874;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: all 0.3s;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+}
+
+.project-image {
+    height: 380px;
+    background-color: #d9d5b5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #5c5740;
+    font-size: 24px;
+}
+
+.project-info {
+    padding: 20px;
+}
+
+/* Contact Page Styles */
+.contact-section {
+    max-width: 600px; /* Reduced from 800px to make it medium size */
+    margin: 0 auto;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 40px;
+}
+
+.contact-section h2 {
+    font-size: 42px;
+    color: #e5dfc8;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.contact-container {
+    background-color: #e5dfc8;
+    color: #1f1f1f;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #5c5740;
+}
+
+.form-group input,
+.form-group textarea {
+    padding: 12px;
+    border: 1px solid #a5a08a;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: white;
+    color: #1f1f1f;
+}
+
+.submit-btn {
+    padding: 12px 24px;
+    background-color: #5c5740;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+    align-self: flex-start;
+}
+
+.submit-btn:hover {
+    background-color: #8a8874;
+}
